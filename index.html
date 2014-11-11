@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+	<button id = "patclick">Click it</button>
+	<button id = "arrayclick">Click again</button>
+	<button id = "randy">Click again</button>
+	<button id = "loopnumber">Click again</button>
+	<button id = "loopnames">Click again</button>
+	<button id = "loopP">Click again</button>
+	<script type="text/javascript">
+	var pat = {
+		name: "Patrick"
+		};
+	var names = ["John", "Paul", "George", "Ringo"];
+	var getRandy = function () {
+		return names[Math.floor(Math.random()*4)];
+		};
+	var car = {
+		doors:4,
+		honk: function() {
+			console.log("HONK!");
+		}
+	};
+	car.honk()
+	document.getElementById("patclick").addEventListener("click",function() {
+		console.log("Hello " + pat.name)
+	});
+	document.getElementById("arrayclick").addEventListener("click",function() {
+		console.log("Hello "+ names[1])
+	});
+	document.getElementById("randy").addEventListener("click",function() {
+		console.log("Hello "+ getRandy())
+		});
+	document.getElementById("loopnumber").addEventListener("click",function() {
+	i = 0;
+		for (; i<11; i++) {
+			console.log(i);
+		}
+	});
+	document.getElementById("loopnames").addEventListener("click",function() {
+	;
+		for (i = 0; i<11; i++) {
+			console.log(names[i]);
+		}
+	});
+	document.getElementById("loopP").addEventListener("click",function() {
+		for (i = 0; i<names.length; i++) {
+			if (names[i].charAt(0)=="P"){
+			console.log(names[i]);
+		}
+	}
+	});
+	</script>
+</body>
+</html>
